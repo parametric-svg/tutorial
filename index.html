@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tutorial by parametric-svg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Tutorial</h1>
+      <h2 class="project-tagline">parametric.svg for dummies</h2>
+      <a href="https://github.com/parametric-svg/tutorial" class="btn">View on GitHub</a>
+      <a href="https://github.com/parametric-svg/tutorial/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/parametric-svg/tutorial/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a id="/"></a> </p>
+
+<h1>
+<a id="creating-a-parametric-svg" class="anchor" href="#creating-a-parametric-svg" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a parametric SVG</h1>
+
+<p>There are many ways to create a <em>parametric.svg</em> graphic. If you’re a designer or office person, you’d probably like to draw your things first and attach the parametric stuff later on. You’re in the right place – read on! If you’re more of a coder and want to hand-craft your SVG markup, you can skip right over to <a href="#/online-editor">the next section</a>.</p>
+
+<p>You can make a parametric drawing in any SVG editor. There’s a fabulous free open-source one called <a href="https://inkscape.org">Inkscape</a> – that’s what we’ll be using in this tutorial. Head over to <a href="https://inkscape.org/en/download/">download</a>, install and start Inkscape. Come back when it’s up and running. We’ll still be here when you come!</p>
+
+<hr>
+
+<p>Congratulations! Here’s what Inkscape v0.91 greets me with on a Linux machine. You probably see a similar window:</p>
+
+<p><img src="./Readme/Inkscape%20greets%20you.png" alt="Inkscape greets you"></p>
+
+<p>If you’ve ever fiddled with Adobe Illustrator, Corel Draw or even Microsoft Paint, I bet you feel right at home. Creating drawings in Inkscape is really easy.</p>
+
+<p>Off we go then! Let’s start with something simple – we don’t want to make our first drawing too complicated. A circle is a good start. Just make sure you hold down <kbd>CTRL</kbd> while drawing – otherwise you’ll end up with more of an egg shape.</p>
+
+<p><img src="./Readme/Drawing%20a%20circle.png" alt="Drawing a circle"></p>
+
+<p>Well done! Our circle is a plain static SVG element. Let’s make its radius parametric! Inkscape ships with an XML editor – the perfect tool to get the job done. Let’s select the circle and pick the tool <em>Edit → XML Editor…</em> from the top menu.</p>
+
+<blockquote>
+<p><g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji></p>
+
+<p>You can add, edit and remove parametric attributes right inside Inkscape using the built-in <em>XML Editor</em>.</p>
+</blockquote>
+
+<p><img src="./Readme/The%20XML%20editor.png" alt="The XML editor"></p>
+
+<p>We’re greeted by a window split in two parts. On the left side there is a tree-like structure listing all elements in our drawing. On the right there are attributes of our circle. That’s what we’re interested in!</p>
+
+<p>Under the list of attributes we have two input fields – one for setting the name of an attribute, the other for setting its value.</p>
+
+<p>Right – let’s get our job done. We wanted to make the radius of our circle parametric. To do that let’s select the attribute <code>r</code> in the right pane – and change its name to <code>parametric:r</code> in the input field below.</p>
+
+<blockquote>
+<p><g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji></p>
+
+<p>Whenever you want to make an attribute parametric, just add the namespace prefix <code>parametric:</code> to it.</p>
+</blockquote>
+
+<p><img src="./Readme/A%20parametric%20attribute.png" alt="A parametric attribute"></p>
+
+<p>Adding the <code>parametric:</code> prefix will create a new attribute – it won’t remove the <code>r</code> we selected before. We wouldn’t want that – the <code>r</code> attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the <em>parametric.svg</em> format.</p>
+
+<blockquote>
+<p><g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji></p>
+
+<p>Any parametric attribute should have a static fallback – an attribute without the <code>parametric:</code> prefix.</p>
+</blockquote>
+
+<p>We’ve just created our first parametric attribute. Our regular <code>r</code> attribute could only have a static value like <code>157.7027</code> – but
+in our <code>parametric:r</code> we use any mathematical expression like <code>3 * (a + 50)</code> there.</p>
+
+<blockquote>
+<p><g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji></p>
+
+<p>The value of a parametric attribute can be virtually any <a href="https://github.com/parametric-svg/spec#/syntax">mathematical expression</a>. It can also contain <a href="https://github.com/parametric-svg/spec#/syntax/variables">variables</a> and <a href="https://github.com/parametric-svg/spec#/syntax/strings">strings</a>.</p>
+</blockquote>
+
+<p>Now comes the big moment. Click the button <em>Set</em> or hit <kbd>CTRL + ENTER</kbd> on your keyboard to set the attribute! Hold your breath, and—</p>
+
+<p>nothing happened? Inkscape can’t evaluate parametric attributes yet – it’s quite a new idea. In the next section we’ll learn how to use a web app to pass variables to our parametric graphic and evaluate the attribute we’ve created.</p>
+
+<p>If you feel like it, you can set other parametric attributes on the circle. How about setting <code>parametric:style</code> to <code>concat('stroke: tomato; stroke-width: ' + string(2 * 3))</code>? Don’t worry if you don’t know exactly what it means. You can read up on our [specs][] later.</p>
+
+<p>There’s one more thing we need to do before we close Inkscape. The <code>parametric:</code> prefixes we’ve been talking about should belong to an XML namespace. To make sure our file will open in every SVG viewer, we need to declare the namespace upfront. Click the topmost <code>&lt;svg:svg&gt;</code> element on the left side of the XML editor (it might as well be called <code>&lt;svg&gt;</code>). Then set the attribute <code>xmlns:parametric</code> to <code>//parametric-svg.js.org/v1</code> on it.</p>
+
+<blockquote>
+<p><g-emoji alias="bulb" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f4a1.png">💡</g-emoji></p>
+
+<p>Remember to set the attribute <code>xmlns:parametric="//parametric-svg.js.org/v1"</code> on the root <code>&lt;svg&gt;</code> element. This way you’ll make sure your drawing opens anywhere.</p>
+</blockquote>
+
+<p><img src="./Readme/The%20parametric%20namespace.png" alt="The parametric namespace"></p>
+
+<p>Double-check you haven’t made a typo in the namespace stuff. Some SVG parsers are really strict beasts – a single mistyped character can confuse them so much that they can no longer open a drawing.</p>
+
+<p>Alright! Let’s save our drawing somewhere. With all warnings out of the way we can now move on to the exciting part!</p>
+
+<p><a id="/online-editor"></a> </p>
+
+<h2>
+<a id="the-online-editor" class="anchor" href="#the-online-editor" aria-hidden="true"><span class="octicon octicon-link"></span></a>The online editor</h2>
+
+<p><em>A work in progress…</em></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/parametric-svg/tutorial">Tutorial</a> is maintained by <a href="https://github.com/parametric-svg">parametric-svg</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
