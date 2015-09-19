@@ -3,7 +3,7 @@
 Creating a parametric SVG
 =========================
 
-There are many ways to create a *parametric.svg* graphic. If you’re a designer or office person, you’d probably like to draw your things first and attach the parametric stuff later on. You’re in the right place – read on! If you’re more of a coder and want to hand-craft your SVG markup, you can skip right over to [the next section](#/online-editor).
+There are many ways to create a *parametric.svg* graphic. If you’re a designer or office person, you’d probably like to draw your things first and attach the parametric stuff later on. You’re in the right place – read on! If you’re more of a coder and want to hand-craft your SVG markup, you can skip right over to our [online editor][].
 
 You can make a parametric drawing in any SVG editor. There’s a fabulous free open-source one called [Inkscape][] – that’s what we’ll be using in this tutorial. Head over to [download][], install and start Inkscape. Come back when it’s up and running. We’ll still be here when you come!
 
@@ -95,4 +95,6 @@ All is ready. We can now move on to the most exciting part!
 The online editor
 -----------------
 
-*A work in progress…*
+At the time of writing (September 2015) the easiest way to render our `.parametric.svg` drawing is through a rudimentary [online editor][] hosted on *JS Bin*. But trust me – it’s not as bad as it looks! Once we’ve got our drawing inside we can play around, tweak our variables and see the results instantly.
+
+Come on, let’s [head over][online editor] to the editor – instructions are inside!
