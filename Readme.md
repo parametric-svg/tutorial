@@ -21,11 +21,11 @@ Off we go then! Let’s start with something simple – we don’t want to make 
 
 Well done! Our circle is a plain static SVG element. Let’s make its radius parametric! Inkscape ships with an XML editor – the perfect tool to get the job done. Let’s select the circle and pick the tool *Edit → XML Editor…* from the top menu.
 
+![The XML editor](./Readme/The XML editor.png)
+
 > 💡
 >
 > You can add, edit and remove parametric attributes right inside Inkscape using the built-in *XML Editor*.
-
-![The XML editor](./Readme/The XML editor.png)
 
 We’re greeted by a window split in two parts. On the left side there is a tree-like structure listing all elements in our drawing. On the right there are attributes of our circle. That’s what we’re interested in!
 
@@ -33,11 +33,11 @@ Under the list of attributes we have two input fields – one for setting the na
 
 Right – let’s get our job done. We wanted to make the radius of our circle parametric. To do that let’s select the attribute `r` in the right pane – and change its name to `parametric:r` in the input field below.
 
+![A parametric attribute](./Readme/A parametric attribute.png)
+
 > 💡
 >
 > Whenever you want to make an attribute parametric, just add the namespace prefix `parametric:` to it.
-
-![A parametric attribute](./Readme/A parametric attribute.png)
 
 Adding the `parametric:` prefix will create a new attribute – it won’t remove the `r` we selected before. We wouldn’t want that – the `r` attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the *parametric.svg* format.
 
@@ -60,11 +60,11 @@ If you feel like it, you can set other parametric attributes on the circle. How 
 
 There’s one more thing we need to do before we close Inkscape. The `parametric:` prefixes we’ve been talking about should belong to an XML namespace. To make sure our file will open in every SVG viewer, we need to declare the namespace upfront. Click the topmost `<svg:svg>` element on the left side of the XML editor (it might as well be called `<svg>`). Then set the attribute `xmlns:parametric` to `//parametric-svg.js.org/v1` on it.
 
+![The parametric namespace](./Readme/The parametric namespace.png)
+
 > 💡
 >
 > Remember to set the attribute `xmlns:parametric="//parametric-svg.js.org/v1"` on the root `<svg>` element. This way you’ll make sure your drawing opens anywhere.
-
-![The parametric namespace](./Readme/The parametric namespace.png)
 
 Double-check you haven’t made a typo in the namespace stuff. Some SVG parsers are really strict beasts – a single mistyped character can confuse them so much that they can no longer open a drawing.
 
