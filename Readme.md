@@ -70,8 +70,17 @@ There’s one more thing we need to do before we close Inkscape. The `parametric
 
 Double-check you haven’t made a typo in the namespace stuff. Some SVG parsers are really strict beasts – a single mistyped character can confuse them so much that they can no longer open a drawing.
 
-Alright! Let’s save our drawing somewhere. With all warnings out of the way we can now move on to the exciting part!
+Alright! With all warnings out of the way let’s save our drawing under the name `circle.parametric.svg`. Pick the flavor “Plain SVG” in the filetype dropdown (or “Optimized SVG” if you’re feeling adventurous). Any flavor of SVG will do – but Inkscape tends to create bloated markup otherwise.
 
+![Saving your drawing](./Readme/Saving your drawing.png)
+
+> 💡
+>
+> Save your parametric drawings with the extension `.parametric.svg`. This way all tools will handle them as they should.
+
+All is ready. We can now move on to the most exciting part!
+
+[online editor]:            http://jsbin.com/hadede/edit?html,output
 [Inkscape]:                 https://inkscape.org
 [download]:                 https://inkscape.org/en/download/
 [mathematical expression]:  https://github.com/parametric-svg/spec#/syntax
