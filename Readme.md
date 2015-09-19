@@ -39,14 +39,8 @@ Right – let’s get our job done. We wanted to make the radius of our circle p
 >
 > Whenever you want to make an attribute parametric, just add the namespace prefix `parametric:` to it.
 
-Adding the `parametric:` prefix will create a new attribute – it won’t remove the `r` we selected before. We wouldn’t want that – the `r` attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the *parametric.svg* format.
-
-> 💡
->
-> Any parametric attribute should have a static fallback – an attribute without the `parametric:` prefix.
-
-We’ve just created our first parametric attribute. Our regular `r` attribute could only have a static value like `157.7027` – but
-in our `parametric:r` we use any mathematical expression like `3 * (a + 50)` there.
+That’s our first parametric attribute! Put something like `3 * (a + 50)` in the field below. Our regular `r` attribute could only have a static value like `157.7027` – but
+in our `parametric:r` we use any mathematical expression.
 
 > 💡
 >
@@ -54,7 +48,15 @@ in our `parametric:r` we use any mathematical expression like `3 * (a + 50)` the
 
 Now comes the big moment. Click the button *Set* or hit <kbd>CTRL + ENTER</kbd> on your keyboard to set the attribute! Hold your breath, and—
 
-nothing happened? Inkscape can’t evaluate parametric attributes yet – it’s quite a new idea. In the next section we’ll learn how to use a web app to pass variables to our parametric graphic and evaluate the attribute we’ve created.
+nothing happened?
+
+No worries. Inkscape can’t evaluate parametric attributes yet – it’s quite a new idea. In the next section we’ll learn how to use a web-based editor to pass variables to our parametric graphic and render the thing.
+
+You may have noticed that by adding the `parametric:` prefix we created a new attribute. The original `r` attribute we had selected stayed how it was – Inkscape didn’t replace it. We wouldn’t want that – the plain old `r` attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the *parametric.svg* format.
+
+> 💡
+>
+> Any parametric attribute should have a static fallback – an attribute without the `parametric:` prefix.
 
 If you feel like it, you can set other parametric attributes on the circle. How about setting `parametric:style` to `concat('stroke: tomato; stroke-width: ' + string(2 * 3))`? Don’t worry if you don’t know exactly what it means. You can read up on our [specs][] later.
 
