@@ -46,7 +46,7 @@ in our `parametric:r` we use any mathematical expression.
 >
 > The value of a parametric attribute can be virtually any [mathematical expression][]. It can also contain [variables][] and [strings][].
 
-Now comes the big moment. Click the button *Set* or hit <kbd>CTRL + ENTER</kbd> on your keyboard to set the attribute! Hold your breath, and—
+Now comes the big moment. Click the button *Set* or hit <kbd>CTRL</kbd> + <kbd>ENTER</kbd> on your keyboard to set the attribute! Hold your breath, and—
 
 nothing happened?
 
