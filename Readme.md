@@ -83,9 +83,10 @@ All is ready. We can now move on to the most exciting part!
 [online editor]:            http://jsbin.com/hadede/edit?html,output
 [Inkscape]:                 https://inkscape.org
 [download]:                 https://inkscape.org/en/download/
-[mathematical expression]:  https://github.com/parametric-svg/spec#/syntax
-[variables]:                https://github.com/parametric-svg/spec#/syntax/variables
-[strings]:                  https://github.com/parametric-svg/spec#/syntax/strings
+[mathematical expression]:  https://github.com/parametric-svg/-/tree/master/packages/parametric-svg-spec#/syntax
+[variables]:                https://github.com/parametric-svg/-/tree/master/packages/parametric-svg-spec#/syntax/variables
+[strings]:                  https://github.com/parametric-svg/-/tree/master/packages/parametric-svg-spec#/syntax/strings
+[specs]:                    https://github.com/parametric-svg/-/tree/master/packages/parametric-svg-spec#/
 
 
 
