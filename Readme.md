@@ -95,6 +95,6 @@ All is ready. We can now move on to the most exciting part!
 The online editor
 -----------------
 
-At the time of writing (September 2015) the easiest way to render our `.parametric.svg` drawing is through a rudimentary [online editor][] hosted on *JS Bin*. But trust me – it’s not as bad as it looks! Once we’ve got our drawing inside we can play around, tweak our variables and see the results instantly.
+At the time of writing (October 2015) the easiest way to render our `.parametric.svg` drawing is through a rudimentary [online editor][] hosted on *JS Bin*. But trust me – it’s not as bad as it looks! Once we’ve got our drawing inside we can play around, tweak our variables and see the results instantly.
 
 Come on, let’s [head over][online editor] to the editor – instructions are inside!
