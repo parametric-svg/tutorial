@@ -58,7 +58,7 @@ You may have noticed that by adding the `parametric:` prefix we created a new at
 >
 > Any parametric attribute should have a static fallback – an attribute without the `parametric:` prefix.
 
-If you feel like it, you can set other parametric attributes on the circle. How about setting `parametric:style` to `concat('stroke: tomato; stroke-width: ' + string(2 * 3))`? Don’t worry if you don’t know exactly what it means. You can read up on our [specs][] later.
+If you feel like it, you can set other parametric attributes on the circle. How about setting `parametric:style` to `` `stroke: charcoal; stroke-width: ${2 * 3}` ``? Don’t worry if you don’t know exactly what it means. You can read up on our [specs][] later.
 
 There’s one more thing we need to do before we close Inkscape. The `parametric:` prefixes we’ve been talking about should belong to an XML namespace. To make sure our file will open in every SVG viewer, we need to declare the namespace upfront. Click the topmost `<svg:svg>` element on the left side of the XML editor (it might as well be called `<svg>`). Then set the attribute `xmlns:parametric` to `//parametric-svg.js.org/v1` on it.
 
