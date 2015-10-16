@@ -50,7 +50,7 @@ Now comes the big moment. Click the button *Set* or hit <kbd>CTRL</kbd> + <kbd>E
 
 nothing happened?
 
-No worries. Inkscape can’t evaluate parametric attributes yet – it’s quite a new idea. In the next section we’ll learn how to use a web-based editor to pass variables to our parametric graphic and render the thing.
+No worries. Inkscape doesn’t understand parametric attributes yet – it’s quite a new idea. In the next section we’ll learn how to use a web-based editor to pass variables to our parametric graphic and render the thing.
 
 You may have noticed that by adding the `parametric:` prefix we created a new attribute. The original `r` attribute we had selected stayed how it was – Inkscape didn’t replace it. We wouldn’t want that – the plain old `r` attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the *parametric.svg* format.
 
