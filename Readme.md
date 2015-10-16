@@ -23,7 +23,7 @@ Well done! Our circle is a plain static SVG element. Let’s make its radius par
 
 ![The XML editor](./Readme/The XML editor.png)
 
-> ## 💡
+> ### 💡
 >
 > You can add, edit and remove parametric attributes right inside Inkscape using the built-in *XML Editor*.
 
@@ -35,14 +35,14 @@ Right – let’s get our job done. We wanted to make the radius of our circle p
 
 ![A parametric attribute](./Readme/A parametric attribute.png)
 
-> ## 💡
+> ### 💡
 >
 > Whenever you want to make an attribute parametric, just add the namespace prefix `parametric:` to it.
 
 That’s our first parametric attribute! Put something like `3 * (a + 50)` in the field below. Our regular `r` attribute could only have a static value like `157.7027` – but
 in our `parametric:r` we use any mathematical expression.
 
-> ## 💡
+> ### 💡
 >
 > The value of a parametric attribute can be virtually any [mathematical expression][]. It can also contain [variables][] and [strings][].
 
@@ -54,7 +54,7 @@ No worries. Inkscape can’t evaluate parametric attributes yet – it’s quite
 
 You may have noticed that by adding the `parametric:` prefix we created a new attribute. The original `r` attribute we had selected stayed how it was – Inkscape didn’t replace it. We wouldn’t want that – the plain old `r` attribute is our fallback value. It will be used by Inkscape and other SVG viewers which don’t understand the *parametric.svg* format.
 
-> ## 💡
+> ### 💡
 >
 > Any parametric attribute should have a static fallback – an attribute without the `parametric:` prefix.
 
@@ -64,7 +64,7 @@ There’s one more thing we need to do before we close Inkscape. The `parametric
 
 ![The parametric namespace](./Readme/The parametric namespace.png)
 
-> ## 💡
+> ### 💡
 >
 > Remember to set the attribute `xmlns:parametric="//parametric-svg.js.org/v1"` on the root `<svg>` element. This way you’ll make sure your drawing opens anywhere.
 
@@ -74,7 +74,7 @@ Alright! With all warnings out of the way let’s save our drawing under the nam
 
 ![Saving your drawing](./Readme/Saving your drawing.png)
 
-> ## 💡
+> ### 💡
 >
 > Save your parametric drawings with the extension `.parametric.svg`. This way all tools will handle them as they should.
 
