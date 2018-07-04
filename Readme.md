@@ -11,17 +11,17 @@ You can make a parametric drawing in any SVG editor. There’s a fabulous free o
 
 Congratulations! Here’s what Inkscape v0.91 greets me with on a Linux machine. You probably see a similar window:
 
-![Inkscape greets you](./Readme/Inkscape greets you.png)
+![Inkscape greets you](./Readme/Inkscape%20greets%20you.png)
 
 If you’ve ever fiddled with Adobe Illustrator, Corel Draw or even Microsoft Paint, I bet you feel right at home. Creating drawings in Inkscape is really easy.
 
 Off we go then! Let’s start with something simple – we don’t want to make our first drawing too complicated. A circle is a good start. Just make sure you hold down <kbd>CTRL</kbd> while drawing – otherwise you’ll end up with an egg-like shape.
 
-![Drawing a circle](./Readme/Drawing a circle.png)
+![Drawing a circle](./Readme/Drawing%20a%20circle.png)
 
 Well done! Our circle is a plain static SVG element. Let’s make its radius parametric! Inkscape ships with an XML editor – the perfect tool to get the job done. Let’s select the circle and pick the tool *Edit → XML Editor…* from the top menu.
 
-![The XML editor](./Readme/The XML editor.png)
+![The XML editor](./Readme/The%20XML%20editor.png)
 
 > ### 💡
 >
@@ -33,7 +33,7 @@ Under the list of attributes we have two input fields – one for setting the na
 
 Right – let’s get our job done. We wanted to make the radius of our circle parametric. To do that let’s select the attribute `r` in the right pane – and change its name to `parametric:r` in the input field below.
 
-![A parametric attribute](./Readme/A parametric attribute.png)
+![A parametric attribute](./Readme/A%20parametric%20attribute.png)
 
 > ### 💡
 >
@@ -62,7 +62,7 @@ If you feel like it, you can set other parametric attributes on the circle. How 
 
 There’s one more thing we need to do before we close Inkscape. The `parametric:` prefixes we’ve been talking about should belong to an XML namespace. To make sure our file will open in every SVG viewer, we need to declare the namespace upfront. Click the topmost `<svg:svg>` element on the left side of the XML editor (it might as well be called `<svg>`). Then set the attribute `xmlns:parametric` to `//parametric-svg.js.org/v1` on it.
 
-![The parametric namespace](./Readme/The parametric namespace.png)
+![The parametric namespace](./Readme/The%20parametric%20namespace.png)
 
 > ### 💡
 >
@@ -72,7 +72,7 @@ Double-check you haven’t made a typo in the namespace stuff. Some SVG parsers 
 
 Alright! With all warnings out of the way let’s save our drawing under the name `circle.parametric.svg`. Pick the flavor “Plain SVG” in the filetype dropdown (or “Optimized SVG” if you’re feeling adventurous). Any flavor of SVG will do – but Inkscape tends to create bloated markup otherwise.
 
-![Saving your drawing](./Readme/Saving your drawing.png)
+![Saving your drawing](./Readme/Saving%20your%20drawing.png)
 
 > ### 💡
 >
